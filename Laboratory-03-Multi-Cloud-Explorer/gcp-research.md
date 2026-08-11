@@ -1,24 +1,30 @@
 # Google Cloud Platform (GCP) Research
 
 ## Brief Overview
-(2-3 sentences — what is it, who runs it)
+GCP is Google's cloud computing platform. It's known for being strong in
+data analytics, artificial intelligence, and machine learning tools.
 
 ## Global Infrastructure
-(How many regions/availability zones does it have? Check their infrastructure/regions page.)
+GCP has around 43 regions and over 130 zones worldwide.
 
 ## Cloud Management Console
-(What is the console called? e.g. what you log into to manage resources)
+It's called the Google Cloud Console — that's where you manage your
+projects and resources.
 
 ## Four (4) Core Services
-1.
-2.
-3.
-4.
+1. Compute Engine – for renting virtual servers
+2. Cloud Storage – for storing files and data
+3. Cloud IAM – for managing user access
+4. BigQuery – for analyzing large sets of data
 
 ## Three (3) Advantages
-1.
-2.
-3.
+1. It's considered the strongest platform for AI and machine learning
+   tools.
+2. It has great support for Kubernetes since Google created Kubernetes
+   in the first place.
+3. Its pricing is often seen as simpler and more flexible than the other
+   two providers.
 
 ## Typical Enterprise Use Cases
-(2-3 sentences)
+Companies use GCP for AI and machine learning projects, big data
+analytics, and building apps that run on Kubernetes containers.
