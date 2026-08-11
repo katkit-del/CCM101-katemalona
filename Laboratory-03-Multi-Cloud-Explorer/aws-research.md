@@ -1,5 +1,5 @@
 
-# [Platform Name] Research
+# Microsoft Azure Research
 
 ## Brief Overview
 (2-3 sentences — what is it, who runs it)
