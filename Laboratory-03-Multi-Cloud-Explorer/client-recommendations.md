@@ -54,3 +54,16 @@ traffic, like during a big sale, without crashing. Its wide range of
 services also supports large, complex systems.
 
 **Services they could use:** EC2, S3, Amazon VPC
+
+
+
+## Multi-Cloud Decision Matrix
+
+| Business Requirement | Recommended Platform | Justification |
+|---|---|---|
+| Startup Company | Google Cloud Platform (GCP) | Offers flexible, pay-as-you-go pricing and free credits, which helps a small team with a limited budget. |
+| Enterprise Organization | Amazon Web Services (AWS) | Has the widest range of services and is proven to handle large, complex systems reliably. |
+| Microsoft Environment | Microsoft Azure | Connects smoothly with Microsoft tools like Windows Server, Microsoft 365, and Active Directory. |
+| AI / Machine Learning | Google Cloud Platform (GCP) | Has the strongest AI and machine learning tools, built for high-performance computing. |
+| Kubernetes Deployment | Google Cloud Platform (GCP) | Google created Kubernetes, so GCP supports it best through Google Kubernetes Engine (GKE). |
+| Global Web Application | Amazon Web Services (AWS) | Has the most regions and availability zones worldwide, plus auto-scaling for handling traffic spikes. |
