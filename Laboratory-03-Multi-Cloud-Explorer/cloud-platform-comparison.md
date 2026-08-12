@@ -30,3 +30,14 @@ powerful AI tools and created Kubernetes, so it supports it the best.
 I would choose AWS because it has the widest range of services and the
 most learning resources available, which makes it easier for a beginner
 like me to find help when needed.
+
+
+## Equivalent Services Across Providers
+
+| Service Category | AWS | Azure | GCP |
+|---|---|---|---|
+| Virtual Machine | EC2 | Azure Virtual Machines | Compute Engine |
+| Object Storage | S3 | Azure Blob Storage | Cloud Storage |
+| Identity Management | IAM | Microsoft Entra ID | Cloud IAM |
+| SQL Database | Amazon RDS | Azure SQL Database | Cloud SQL |
+| Kubernetes | Amazon EKS | Azure Kubernetes Service (AKS) | Google Kubernetes Engine (GKE) |
