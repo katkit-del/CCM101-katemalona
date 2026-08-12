@@ -10,7 +10,7 @@ Since the company expects rapid growth, GCP's Compute Engine can scale
 up easily as more users join the app. GCP also gives free credits for
 new users, which helps a startup with a limited budget get started
 without spending much upfront.
-**Services they could use:** Compute Engine, Cloud Storage, Firebase
+**Services they could use:*** Compute Engine, Cloud Storage, Firebase
 
 ## Client B – University
 Already uses Windows Server, Microsoft 365, and Active Directory. Wants to
