@@ -10,7 +10,8 @@ Since the company expects rapid growth, GCP's Compute Engine can scale
 up easily as more users join the app. GCP also gives free credits for
 new users, which helps a startup with a limited budget get started
 without spending much upfront.
-**Services they could use:*** Compute Engine, Cloud Storage, Firebase
+
+**Services they could use:** Compute Engine, Cloud Storage, Firebase
 
 ## Client B – University
 Already uses Windows Server, Microsoft 365, and Active Directory. Wants to
@@ -23,6 +24,7 @@ Azure connects smoothly with these tools, so moving to the cloud won't
 require replacing what they already have. Microsoft Entra ID can also
 take over managing student and staff accounts, since it works directly
 with Active Directory. This makes the migration simpler and less risky.
+
 **Services they could use:** Azure Virtual Machines, Microsoft Entra ID,
 Azure Blob Storage
 
@@ -36,6 +38,7 @@ with tools made specifically for data science and machine learning. GCP
 also created Kubernetes, so it's a great fit if the company plans to run
 containerized AI workloads. This makes GCP a natural choice for a
 research-focused company.
+
 **Services they could use:** Compute Engine, Vertex AI, BigQuery
 
 ## Client D – Global E-Commerce Company
@@ -49,4 +52,5 @@ customers in different countries, keeping the site fast everywhere. AWS
 also offers auto-scaling, so the platform can handle sudden spikes in
 traffic, like during a big sale, without crashing. Its wide range of
 services also supports large, complex systems.
+
 **Services they could use:** EC2, S3, Amazon VPC
