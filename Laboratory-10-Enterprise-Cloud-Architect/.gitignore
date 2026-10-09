@@ -1,0 +1,3 @@
+# secrets and generated data must never reach GitHub
+.env
+backups/

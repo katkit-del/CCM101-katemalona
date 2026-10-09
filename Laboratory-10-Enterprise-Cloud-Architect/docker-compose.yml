@@ -1,0 +1,67 @@
+# =====================================================================
+# CCM101 - Laboratory 10: Enterprise Cloud Architect
+# Project : VaultCloud - Secure Multi-Tier Web Application
+# Stack   : Nextcloud (app tier) + MariaDB (data tier)
+#
+# Usage   : cp .env.example .env   (then edit the passwords)
+#           docker compose up -d
+# =====================================================================
+
+name: vaultcloud
+
+services:
+  # ---------------- DATA TIER ----------------
+  db:
+    image: mariadb:10.11
+    container_name: vault-db
+    restart: unless-stopped
+    # Settings recommended by Nextcloud for MariaDB
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    environment:
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MARIADB_DATABASE: ${DB_NAME}
+      MARIADB_USER: ${DB_USER}
+      MARIADB_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql          # persistent database files
+    networks:
+      - backend                         # private network only - no ports published
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  # ---------------- APPLICATION TIER ----------------
+  app:
+    image: nextcloud:apache
+    container_name: vault-app
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy      # wait until MariaDB is really ready
+    environment:
+      MYSQL_HOST: db                    # service name = DNS name on the backend network
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      NEXTCLOUD_ADMIN_USER: ${NC_ADMIN_USER}
+      NEXTCLOUD_ADMIN_PASSWORD: ${NC_ADMIN_PASSWORD}
+      NEXTCLOUD_TRUSTED_DOMAINS: ${NC_TRUSTED_DOMAINS}
+    volumes:
+      - app_data:/var/www/html          # persistent app, config and user files
+    ports:
+      - "8080:80"                       # the ONLY port published to the VM
+    networks:
+      - frontend
+      - backend
+
+networks:
+  frontend:                             # reachable from outside (web traffic)
+  backend:
+    internal: true                      # no route to the outside world
+
+volumes:
+  db_data:
+  app_data:
